@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-background: #FDF4FF; /* purple-50 - soft lavender tint */
+    --color-foreground: #1F2937; /* gray-800 - readable dark text */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white - clean cards */
+    --color-card-foreground: #1F2937; /* gray-800 */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1F2937; /* gray-800 */
+    
+    /* Primary Colors (Lavender) */
+    --color-primary: #C084FC; /* purple-400 - main romantic accent */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors (Peach) */
+    --color-secondary: #FBBF24; /* amber-400 - warm peach accent */
+    --color-secondary-foreground: #1F2937; /* gray-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F3F4F6; /* gray-100 - subtle backgrounds */
+    --color-muted-foreground: #9CA3AF; /* gray-400 - secondary text */
+    
+    /* Accent Colors */
+    --color-accent: #F9A8D4; /* pink-300 - playful accent */
+    --color-accent-foreground: #1F2937; /* gray-800 */
+    
+    /* Destructive Colors */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #10B981; /* green-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error Colors */
+    --color-error: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Border Colors */
+    --color-border: #E9D5FF; /* purple-200 - soft lavender borders */
+    --color-input: #E9D5FF; /* purple-200 */
+    --color-ring: #C084FC; /* purple-400 */
+  }
+}
+
+@layer utilities {
+  /* Floating Hearts Animation */
+  @keyframes float-heart {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes float-heart-slow {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(1);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(-360deg) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes float-heart-fast {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(0.8);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(180deg) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Confetti Burst Animation */
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes confetti-fall-left {
+    0% {
+      transform: translate(-50vw, -100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-20vw, 100vh) rotate(-720deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes confetti-fall-right {
+    0% {
+      transform: translate(50vw, -100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(20vw, 100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Pulse Glow Animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(192, 132, 252, 0.4),
+                  0 0 40px rgba(192, 132, 252, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(192, 132, 252, 0.6),
+                  0 0 60px rgba(192, 132, 252, 0.3);
+    }
+  }
+  
+  /* Shake Animation for NO button */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+  }
+  
+  /* Scroll Reveal Animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Polaroid Rotation Utilities */
+  .rotate-slight-left {
+    transform: rotate(-2deg);
+  }
+  
+  .rotate-slight-right {
+    transform: rotate(2deg);
+  }
+  
+  .rotate-medium-left {
+    transform: rotate(-4deg);
+  }
+  
+  .rotate-medium-right {
+    transform: rotate(4deg);
+  }
+  
+  /* Handwritten Font Effect */
+  .handwritten {
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .glass-lavender {
+    background: rgba(192, 132, 252, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* Animation Classes */
+  .animate-float-heart {
+    animation: float-heart 12s ease-in infinite;
+  }
+  
+  .animate-float-heart-slow {
+    animation: float-heart-slow 15s ease-in-out infinite;
+  }
+  
+  .animate-float-heart-fast {
+    animation: float-heart-fast 9s ease-in infinite;
+  }
+  
+  .animate-confetti-fall {
+    animation: confetti-fall 3s ease-in forwards;
+  }
+  
+  .animate-confetti-fall-left {
+    animation: confetti-fall-left 3s ease-in forwards;
+  }
+  
+  .animate-confetti-fall-right {
+    animation: confetti-fall-right 3s ease-in forwards;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+}
