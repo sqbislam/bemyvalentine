@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'A boilerplate project with Next.js and Tailwind CSS',
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
+      { url: '/favicon.svg', type: 'image/svg+xml' }
     ],
   },
 };
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}
-</body>
+      </body>
     </html>
   );
 }
