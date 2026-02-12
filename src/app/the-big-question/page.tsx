@@ -1,12 +1,12 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
- import Header from'@/components/common/Header';
- import Footer from'@/components/common/Footer';
- import FloatingHearts from'./components/FloatingHearts';
- import DodgingNoButton from'./components/DodgingNoButton';
- import DramaticMessages from'./components/DramaticMessages';
- import Icon from'@/components/ui/AppIcon';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+import FloatingHearts from './components/FloatingHearts';
+import DodgingNoButton from './components/DodgingNoButton';
+import DramaticMessages from './components/DramaticMessages';
+import Icon from '@/components/ui/AppIcon';
 
 export default function TheBigQuestion() {
   const router = useRouter()
@@ -26,7 +26,7 @@ export default function TheBigQuestion() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-background via-purple-50 to-pink-50">
       <Header />
-      
+
       {/* Floating Hearts Background */}
       <FloatingHearts />
 

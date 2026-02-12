@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
-            © 2026 BeMyValentine Sifat. All rights reserved by your hubby.
+            © 2026 All rights reserved by your hubby.
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export default function LoveCoupons() {
     },
     {
       id: 'coupon_3',
-      title: '10 x Movie Marathon Night',
+      title: '20 x Movie Marathon Night',
       description: 'Her picks, no complaints',
       icon: '🎬',
       color: 'from-purple-400 to-indigo-400'
@@ -48,14 +48,14 @@ export default function LoveCoupons() {
     },
     {
       id: 'coupon_5',
-      title: '20 x Breakfast in Bed',
+      title: '50 x Breakfast in Bed',
       description: 'A lazy morning treat',
       icon: '🥞',
       color: 'from-yellow-400 to-amber-400'
     },
     {
       id: 'coupon_6',
-      title: '10 x Full Day of Pampering',
+      title: '20 x Full Day of Pampering',
       description: 'Spa vibes at home',
       icon: '💆',
       color: 'from-pink-400 to-purple-400'
@@ -68,10 +68,17 @@ export default function LoveCoupons() {
       color: 'from-rose-400 to-pink-400'
     },
     {
-      id: 'coupon_7',
-      title: '5 x "You Were Right" Card',
+      id: 'coupon_8',
+      title: '20 x Any acts of service',
       description: 'To be played at any time, no arguments',
-      icon: '👑',
+      icon: '💜',
+      color: 'from-rose-400 to-pink-400'
+    },
+    {
+      id: 'coupon_9',
+      title: '3 x Vacation Getaways',
+      description: 'We pack, I plan, you relax',
+      icon: '✈️',
       color: 'from-rose-400 to-pink-400'
     }
   ];
@@ -91,23 +98,25 @@ export default function LoveCoupons() {
 
     // Map emojis to text alternatives for PDF
     const iconTextMap: { [key: string]: string } = {
-      '🌟': 'STAR',
+      '🌟': 'DATES',
       '🧺': 'PICNIC',
       '🎬': 'MOVIE',
       '✨': 'SPARKLE',
       '🥞': 'BREAKFAST',
       '💆': 'SPA',
-      '👑': 'CROWN'
+      '👑': 'YOU ARE RIGHT',
+      '💜': 'SERVICE',
+      '✈️': 'TRAVEL'
     };
 
     // Title
     pdf.setFontSize(28);
     pdf.setTextColor(139, 92, 246); // Purple
-    pdf.text('Love Coupons', pageWidth / 2, 20, { align: 'center' });
+    pdf.text('Love Coupons For Sifat', pageWidth / 2, 20, { align: 'center' });
 
     pdf.setFontSize(12);
     pdf.setTextColor(100, 100, 100);
-    pdf.text('Redeem these anytime for special moments together', pageWidth / 2, 28, { align: 'center' });
+    pdf.text('Redeem these anytime in the year 2026', pageWidth / 2, 28, { align: 'center' });
 
     let yPosition = 40;
 
@@ -130,7 +139,7 @@ export default function LoveCoupons() {
       };
 
       const color = gradientColors[coupon.color as keyof typeof gradientColors] || [167, 139, 250];
-      
+
       // Main coupon box
       pdf.setDrawColor(200, 200, 200);
       pdf.setLineWidth(0.5);
@@ -205,7 +214,7 @@ export default function LoveCoupons() {
             <p className="text-lg md:text-xl font-inter text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Redeem these anytime for special moments together 💜
             </p>
-            
+
             {/* Download PDF Button */}
             <button
               onClick={generatePDF}

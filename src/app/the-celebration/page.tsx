@@ -1,10 +1,10 @@
 'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
- import Header from'@/components/common/Header';
- import Footer from'@/components/common/Footer';
- import ConfettiBurst from'./components/ConfettiBurst';
- import Icon from'@/components/ui/AppIcon';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+import ConfettiBurst from './components/ConfettiBurst';
+import Icon from '@/components/ui/AppIcon';
 
 export default function TheCelebration() {
   const router = useRouter()
@@ -42,7 +42,7 @@ export default function TheCelebration() {
             </h1>
 
             <p className="text-2xl md:text-3xl font-inter text-muted-foreground max-w-2xl mx-auto leading-relaxed italic">
-              You just made me the happiest person in the world!
+              You just made me the happiest person in the world! Like seriously, I can't stop smiling. I am so excited for all the amazing memories we're going to create together. I love you to the moon and back, Sifat!
             </p>
 
             {/* Animated Hearts */}
