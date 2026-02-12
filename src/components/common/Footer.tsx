@@ -9,24 +9,21 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <span className="text-xl">💜</span>
             <span className="text-base font-playfair font-semibold text-foreground">
-              BeMyValentine
+              BeMyValentine Sifat?
             </span>
           </div>
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <Link href="#" className="hover:text-primary transition-colors">
-              Privacy
-            </Link>
-            <span className="text-muted-foreground">·</span>
+            <span className="text-muted-foreground">For Sifat Tasnim</span>
             <span className="text-muted-foreground">
-              Made with 💜
+              Made with 💜 by your hubby
             </span>
           </div>
 
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
-            © 2026 BeMyValentine
+            © 2026 BeMyValentine Sifat. All rights reserved by your hubby.
           </div>
         </div>
       </div>

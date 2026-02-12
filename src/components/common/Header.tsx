@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
- import Link from'next/link';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
- import Icon from'@/components/ui/AppIcon';
+import Icon from '@/components/ui/AppIcon';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/the-big-question" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <span className="text-2xl">💜</span>
           <span className="text-xl font-playfair font-semibold text-foreground tracking-tight">
-            BeMyValentine
+            BeMyValentine Sifat?
           </span>
         </Link>
 
@@ -33,10 +33,9 @@ export default function Header() {
             <Link
               key={link.id}
               href={link.href}
-              className={`text-base font-inter font-medium transition-colors ${
-                isActive(link.href)
-                  ? 'text-primary border-b-2 border-primary' :'text-foreground hover:text-primary'
-              }`}
+              className={`text-base font-inter font-medium transition-colors ${isActive(link.href)
+                  ? 'text-primary border-b-2 border-primary' : 'text-foreground hover:text-primary'
+                }`}
             >
               {link.label}
             </Link>
@@ -62,10 +61,9 @@ export default function Header() {
                 key={link.id}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-base font-inter font-medium py-2 transition-colors ${
-                  isActive(link.href)
-                    ? 'text-primary border-l-4 border-primary pl-4' :'text-foreground hover:text-primary hover:pl-4'
-                }`}
+                className={`text-base font-inter font-medium py-2 transition-colors ${isActive(link.href)
+                    ? 'text-primary border-l-4 border-primary pl-4' : 'text-foreground hover:text-primary hover:pl-4'
+                  }`}
               >
                 {link.label}
               </Link>
