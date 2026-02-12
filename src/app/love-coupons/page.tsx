@@ -76,7 +76,7 @@ export default function LoveCoupons() {
     },
     {
       id: 'coupon_9',
-      title: '3 x Vacation Getaways',
+      title: '2 x Vacation Getaways',
       description: 'We pack, I plan, you relax',
       icon: '✈️',
       color: 'from-rose-400 to-pink-400'
@@ -116,7 +116,7 @@ export default function LoveCoupons() {
 
     pdf.setFontSize(12);
     pdf.setTextColor(100, 100, 100);
-    pdf.text('Redeem these anytime in the year 2026', pageWidth / 2, 28, { align: 'center' });
+    pdf.text('Redeem these anytime in the year 2026. To be fulfilled by Saqib', pageWidth / 2, 28, { align: 'center' });
 
     let yPosition = 40;
 
@@ -198,7 +198,7 @@ export default function LoveCoupons() {
     });
 
     // Save the PDF
-    pdf.save('Love-Coupons.pdf');
+    pdf.save('Love-Coupons-for-Sifat.pdf');
   };
 
   return (
@@ -209,10 +209,10 @@ export default function LoveCoupons() {
         <section className="container mx-auto px-6 py-16 md:py-24 max-w-7xl">
           <div className="text-center space-y-6 mb-16">
             <h1 className="text-5xl md:text-7xl font-playfair font-bold text-foreground leading-tight tracking-tight">
-              Love <span className="text-primary italic">Coupons</span>
+              Love <span className="text-primary italic">Coupons</span> for Sifat
             </h1>
             <p className="text-lg md:text-xl font-inter text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Redeem these anytime for special moments together 💜
+              Redeem these anytime for special moments together 💜 To be fulfiled by Saqib.
             </p>
 
             {/* Download PDF Button */}
